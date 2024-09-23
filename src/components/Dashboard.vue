@@ -54,13 +54,13 @@
         handleCommandOutput({ id, output }) {
             const item = this.items.find(item => item.id === id);
             if (item) {
-            this.$set(item, 'output', item.output + output);
-            this.$nextTick(() => {
-                const preElement = this.$refs['preOutput_' + id];
-                if (preElement) {
-                preElement.scrollTop = preElement.scrollHeight;
-                }
-            });
+                this.$set(item, 'output', item.output + output);
+                this.$nextTick(() => {
+                    const preElement = this.$refs['preOutput_' + id];
+                    if (preElement) {
+                    preElement.scrollTop = preElement.scrollHeight;
+                    }
+                });
             }
         }
         },
@@ -70,9 +70,9 @@
         this.socket.on('commandOutput', this.handleCommandOutput);
         },
         beforeUnmount() {
-        if (this.socket) {
-            this.socket.disconnect();
-        }
+            if (this.socket) {
+                this.socket.disconnect();
+            }
         }
     };
 </script>
