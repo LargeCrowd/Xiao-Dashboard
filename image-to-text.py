@@ -1,4 +1,3 @@
-import os
 from openai import OpenAI
 import base64
 from dotenv import load_dotenv
@@ -24,7 +23,6 @@ response = client.chat.completions.create(
             {"type": "text", "text": "describe the image"},  # Set the prompt
             {"type": "image_url", "image_url": {
                 "url": f"data:image/png;base64,{base64_image}"
-                # "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/The_Algebra_of_Mohammed_Ben_Musa_-_page_82b.png"
                 }
             }
         ]}
