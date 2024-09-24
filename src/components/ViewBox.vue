@@ -44,7 +44,7 @@ const redirectToItemPage = (itemId) => {
           @on-load="onLoading"
           width="200"
           height="200"
-          object-fit="contain"
+          object-fit="cover"
         />
       </n-flex>
     </template>
