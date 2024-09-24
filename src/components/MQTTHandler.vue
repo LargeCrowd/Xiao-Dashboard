@@ -2,13 +2,15 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import mqtt from 'mqtt';
+import ggimage from '../google-image.png';
 
 const deviceId = ref('xiao_esp32_s3_device_id'); // Replace with actual device ID or pass it as a prop
 const imageBase64 = ref(null); // Store the base64 image received from MQTT
+// imageBase64 = ref(ggimage);
 
 // Function to handle MQTT connection and message reception
 const connectMQTT = () => {
-  const mqttAddress = 'mqtt://192.168.66.184'; // Replace with your MQTT broker address
+	const mqttAddress = 'ws://192.168.137.1:9001';
   const client = mqtt.connect(mqttAddress);
 
   // Define topics based on deviceId
