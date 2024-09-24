@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-IMAGE_PATH = "google-image.png"
+IMAGE_PATH = "./src/google-image.png"
 MODEL = "gpt-4o-mini"
 
 client = OpenAI()
