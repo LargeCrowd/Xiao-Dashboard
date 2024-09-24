@@ -14,8 +14,7 @@ def encode_image(image_path):
         return base64.b64encode(image_file.read()).decode("utf-8")
 
 
-
-def get_image_description(image_path):
+def get_image_to_text(image_path):
     base64_image = encode_image(image_path)
     # print(base64_image)
 
@@ -38,5 +37,6 @@ def get_image_description(image_path):
     print(image_description)
     return image_description
 
+
 if __name__ == "__main__":
-    get_image_description(IMAGE_PATH)
+    get_image_to_text(IMAGE_PATH)
